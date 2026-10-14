@@ -20,7 +20,7 @@ module tt_um_jorgenkraghjakobsen_bvm_quantum_random (
         q_random = q_random + 8'b00000001;
 
   // All output pins must be assigned. If not used, assign to 0.
-    assign uo_out  = (7'b0000000,q_random[0]);
+    assign uo_out  = {7'b0000000,q_random[0]};
   assign uio_out = 0;
   assign uio_oe  = 0;
   // List all unused inputs to prevent warnings
