@@ -16,7 +16,7 @@ module tt_um_jorgenkraghjakobsen_bvm_quantum_random (
     input  wire       rst_n     // reset_n - low to reset
 );
   reg [7:0] q_random;
-    always posedge( clk )
+    always @(posedge clk)
         q_random = q_random + 8'b00000001;
 
   // All output pins must be assigned. If not used, assign to 0.
